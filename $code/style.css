@@ -1,11 +1,53 @@
 #wallpaper {
-    position: absolute;
+    position: fixed;
     top: 0;
     left: 0;
     width: 100vw;
     height: 100vh;
     object-fit: cover;
     z-index: -10;
-    filter: blur(4px);
-    -webkit-filter: blur(4px);
+}
+#printers {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: auto;
+    display: grid;
+    margin-top: 50px;
+    margin-bottom: 50px;
+    grid-template-columns: 100%;
+}
+#printers a {
+    text-align: center;
+    text-decoration: none;
+    margin: 10px;
+    padding: 10px;
+    border-radius: 12px;
+    transition: 0.5s ease;
+}
+#printers a:hover {
+    background-color: rgba(255, 255, 255, 0.3);
+    backdrop-filter: blur(3px);
+    -webkit-backdrop-filter: blur(3px);
+    box-shadow: 0 0 10px white;
+}
+#printers a div {
+    color: white;
+    text-shadow: 0 0 8px black;
+}
+@media only screen and (min-width: 400px) {
+    #printers {
+        grid-template-columns: 50% 50%;
+    }
+}
+@media only screen and (min-width: 600px) {
+    #printers {
+        grid-template-columns: 33% 34% 33%;
+    }
+}
+@media only screen and (min-width: 800px) {
+    #printers {
+        grid-template-columns: 25% 25% 25% 25%;
+    }
 }
